@@ -2,6 +2,8 @@
   "dependencies": {
     "consul-node": "^0.0.2",
     "lodash": "^4.17.4",
-    "node-docker-api": "^1.1.16"
+    "node-docker-api": "^1.1.16",
+    "stream-split": "^1.1.0",
+    "yargs": "^8.0.2"
   }
 }
