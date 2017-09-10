@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "consul-node": "^0.0.2",
+    "lodash": "^4.17.4",
+    "node-docker-api": "^1.1.16"
+  }
+}
