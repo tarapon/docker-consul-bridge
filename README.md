@@ -8,12 +8,22 @@ Sample usage `./src/boot.js --consul http://localhost:8500/v1 --socket /var/run/
 
 ### Arguments:
 
-* --consul - consul url
-* --socket - path to docker socket
-* --resync - resync interval in seconds (optional)
+* `--consul` - consul url
+* `--socket` - path to docker socket
+* `--resync` - resync interval in seconds (optional)
 
 ### To be register container should have following env variables:
 
 * SERVICE_NAME (required) service name in consul
 * SERVICE_PORT (optional) port to register in consul (by default first port will be used)
 * SERVICE_NETWORK (optional) network name to register in consul (by default first network will be used)
+
+### Container usage
+
+```
+docker build . -t registrator
+docker run -v /var/run/docker.sock:/var/run/docker.sock registrator \ 
+    --consul http://consul-url:8500/v1 \ 
+    --socket /var/run/docker.sock
+```
+

@@ -51,3 +51,9 @@ resync()
 if (argv.resync) {
   setInterval(resync, argv.resync * 1000)
 }
+
+process.stdin.resume()
+process.on('SIGINT', () => {
+  console.log('exiting...')
+  process.exit()
+})
