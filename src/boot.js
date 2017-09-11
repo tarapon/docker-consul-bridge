@@ -49,5 +49,5 @@ const resync = () => {
 resync()
 
 if (argv.resync) {
-  setInterval(resync, argv.interval * 1000)
+  setInterval(resync, argv.resync * 1000)
 }
